@@ -87,7 +87,6 @@ export default function FifthSection() {
     });
   }
 
-  console.log(price);
   return (
     <div className="min-h-screen px-[15%] py-32 bg-black rounded-3xl">
       <h1 className="text-center text-[3em]">

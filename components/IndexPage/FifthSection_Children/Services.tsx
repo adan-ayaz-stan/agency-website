@@ -16,7 +16,7 @@ export default function Services({ data, changePrice }) {
   return (
     <div
       onClick={serviceClickHandler}
-      className="relative p-6 px-8 bg-gray-900 rounded cursor-pointer"
+      className="relative p-6 px-8 bg-[#111111] cursor-pointer rounded-xl"
     >
       <h1 className="text-2xl">{data.title}</h1>
       <p className="text-gray-400">{data.desc}</p>

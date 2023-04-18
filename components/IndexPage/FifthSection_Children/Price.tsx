@@ -7,7 +7,7 @@ const Price = ({ value }) => {
   const props = useSpring({
     val: value,
     from: { val: prevValue },
-    config: { tension: 80, friction: 24 },
+    config: { tension: 150, friction: 24 },
   });
 
   useEffect(() => {
