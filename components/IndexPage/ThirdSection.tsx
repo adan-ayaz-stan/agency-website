@@ -21,7 +21,7 @@ export default function ThirdSection() {
 
   return (
     <div
-      className={`max-w-screen overflow-hidden flex justify-center items-center ${styles.main}`}
+      className={`h-fit max-w-screen overflow-hidden flex justify-center items-center ${styles.main}`}
     >
       <h1 className="text-[4rem] lg:text-[12rem]">our stack</h1>
 
@@ -29,7 +29,7 @@ export default function ThirdSection() {
         ref={constraintsRef}
         className="absolute top-0 left-0 flex items-center justify-center h-full w-full z-20"
       >
-        <div className="grid grid-cols-2 md:grid-cols-5 auto-rows-auto gap-4">
+        <div className="grid grid-cols-5 md:grid-cols-5 auto-rows-auto gap-4">
           {techArray.map((ele, ind) => {
             return (
               <motion.div

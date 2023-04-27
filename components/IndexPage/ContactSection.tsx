@@ -4,14 +4,14 @@ import SvgBackground from "./ContactSection_Children/SvgBackground";
 export default function ContactSection() {
   return (
     <div
-      className="relative min-h-screen grid grid-cols-1 lg:grid-cols-2 auto-rows-fr items-center px-[5%]"
+      className="relative min-h-screen grid grid-cols-1 lg:grid-cols-2 auto-rows-fr items-center px-0 md:px-[5%]"
       style={{
         background:
           "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(17,17,17,0) 100%)",
       }}
     >
       <SvgBackground />
-      <h1 className="text-[4em] lg:text-[6em] leading-tight">
+      <h1 className="px-[5%] text-[4em] lg:text-[6em] leading-tight">
         Pukinmä enaukio 4B, 00720 Helsinki
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +27,7 @@ export default function ContactSection() {
         </svg>
       </h1>
 
-      <div className="w-full lg:w-5/6 mx-auto flex flex-col gap-3 p-8 lg:px-12 bg-[#0F0E0E] rounded-2xl">
+      <div className="w-full lg:w-5/6 mx-auto flex flex-col gap-3 p-6 py-12 lg:px-12 bg-[#0F0E0E] rounded-2xl">
         <h1 className="text-3xl">Contact us!</h1>
         <p className="text-gray-400">
           Let`s discuss your project, or together we will find a solution to the
