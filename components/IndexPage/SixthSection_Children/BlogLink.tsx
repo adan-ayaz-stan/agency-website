@@ -22,7 +22,8 @@ export default function BlogLink() {
       </h1>
 
       <p className="text-black truncate p-2 bg-gray-100 bg-opacity-70 rounded-lg">
-        Welcome to the NuxWeb Oy Blog! In this article, we're thrilled to...
+        Welcome to the NuxWeb Oy Blog! In this article, we&apos;re thrilled
+        to...
       </p>
 
       {isHovered && (
