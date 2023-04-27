@@ -11,20 +11,6 @@
   src: url(../assets/fonts/Mona\ Sans/Mona-Sans-SemiBold.ttf);
 }
 
-:root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -35,6 +21,7 @@ body {
   color: rgb(var(--foreground-rgb));
   font-family: "IBM Plex Sans", sans-serif;
   background: #111;
+  color: white;
 }
 
 h1 {

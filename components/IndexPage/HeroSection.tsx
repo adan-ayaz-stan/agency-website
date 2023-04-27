@@ -15,6 +15,9 @@ export default function HeroSection() {
 
   return (
     <div ref={divRef} className={`${styles.main}`}>
+      <div className={styles.shape01}></div>
+      <div className={styles.shape02}></div>
+
       <NavigationBar />
 
       <div className="flex flex-col items-center justify-center gap-10 mt-20 lg:mt-12 p-6">
