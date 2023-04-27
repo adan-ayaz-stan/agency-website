@@ -1,18 +1,17 @@
 import React from "react";
 import SvgBackground from "./ContactSection_Children/SvgBackground";
-import Footer from "./Footer";
 
 export default function ContactSection() {
   return (
     <div
-      className="relative min-h-screen grid grid-cols-2 auto-rows-fr items-center px-[5%]"
+      className="relative min-h-screen grid grid-cols-1 lg:grid-cols-2 auto-rows-fr items-center px-[5%]"
       style={{
         background:
           "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(17,17,17,0) 100%)",
       }}
     >
       <SvgBackground />
-      <h1 className="text-[6em] leading-tight">
+      <h1 className="text-[4em] lg:text-[6em] leading-tight">
         Pukinmä enaukio 4B, 00720 Helsinki
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +27,7 @@ export default function ContactSection() {
         </svg>
       </h1>
 
-      <div className="w-5/6 mx-auto flex flex-col gap-3 p-8 px-12 bg-[#0F0E0E] rounded-2xl">
+      <div className="w-full lg:w-5/6 mx-auto flex flex-col gap-3 p-8 lg:px-12 bg-[#0F0E0E] rounded-2xl">
         <h1 className="text-3xl">Contact us!</h1>
         <p className="text-gray-400">
           Let`s discuss your project, or together we will find a solution to the
@@ -41,7 +40,7 @@ export default function ContactSection() {
             placeholder="Your name"
             className="w-full p-5 text-sm bg-[#171921] outline-none rounded-2xl"
           />
-          <div className="grid grid-cols-2 auto-rows-fr gap-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 auto-rows-fr gap-3">
             <input
               placeholder="Email"
               className="w-full p-5 text-sm bg-[#171921] outline-none rounded-2xl"

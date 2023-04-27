@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 
 import styles from "./styles/ThirdSection.module.css";
 
@@ -21,7 +21,7 @@ export default function ThirdSection() {
 
   return (
     <div className={`flex justify-center items-center ${styles.main}`}>
-      <h1 className="text-[12rem]">our stack</h1>
+      <h1 className="text-[4rem] lg:text-[12rem]">our stack</h1>
 
       <div
         ref={constraintsRef}

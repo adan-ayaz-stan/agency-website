@@ -12,7 +12,7 @@ export default function Footer() {
       }}
     >
       <div
-        className="flex gap-2 text-xl"
+        className="flex flex-col items-center md:flex-row gap-2 md:gap-3 text-xl"
         style={{ fontFamily: "IBM Plex Mono, monospace" }}
       >
         <a

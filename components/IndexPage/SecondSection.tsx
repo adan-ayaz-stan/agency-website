@@ -1,77 +1,129 @@
-import React from "react";
+import { motion, useMotionValueEvent } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi/index";
+import { useScroll } from "framer-motion";
+import ServiceType from "./SecondSection_Children/ServiceType";
+
+const data = [
+  {
+    heading: "Design",
+    content: [
+      {
+        title: "Design",
+        desc: "The structure and the prototype are the base from which any project in our studio is built",
+      },
+      {
+        title: "UI/UX",
+        desc: "It continues the theme of the project concept and create its final appearance, interface and memorable style",
+      },
+    ],
+  },
+  {
+    heading: "Frontend",
+    content: [
+      {
+        title: "Layout",
+        desc: "Creating static pages, thought out in the project and visualized on the design",
+      },
+      {
+        title: "Frontend",
+        desc: "Connecting the necessary functionality to interact with the technical part of the project",
+      },
+    ],
+  },
+  {
+    heading: "Backend",
+    content: [
+      {
+        title: "Methods and functions",
+        desc: "Development of mechanics of receiving and transmitting various types of data, creation of calculations and data storage",
+      },
+      {
+        title: "API and infrastructure",
+        desc: "Functionality that receives and transmits data from scripts and from the database when interacting with them",
+      },
+    ],
+  },
+];
 
 export default function SecondSection() {
-  const data = [
-    {
-      heading: "Design",
-      content: [
-        {
-          title: "Design",
-          desc: "The structure and the prototype are the base from which any project in our studio is built",
-        },
-        {
-          title: "UI/UX",
-          desc: "It continues the theme of the project concept and create its final appearance, interface and memorable style",
-        },
-      ],
-    },
-    {
-      heading: "Frontend",
-      content: [
-        {
-          title: "Layout",
-          desc: "Creating static pages, thought out in the project and visualized on the design",
-        },
-        {
-          title: "Frontend",
-          desc: "Connecting the necessary functionality to interact with the technical part of the project",
-        },
-      ],
-    },
-    {
-      heading: "Backend",
-      content: [
-        {
-          title: "Methods and functions",
-          desc: "Development of mechanics of receiving and transmitting various types of data, creation of calculations and data storage",
-        },
-        {
-          title: "API and infrastructure",
-          desc: "Functionality that receives and transmits data from scripts and from the database when interacting with them",
-        },
-      ],
-    },
-  ];
+  const [gap, setGap] = useState(0);
+  const [contentOpacity, setContentOpacity] = useState(0);
+  const containerRef = useRef(null);
+
+  const { scrollY, scrollYProgress } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const scrollPos = window.scrollY;
+    const differencePos =
+      (containerRef.current.offsetTop - scrollPos) /
+      containerRef.current.offsetTop;
+    const differencePosPercentage = differencePos * 100;
+
+    setGap(differencePosPercentage);
+
+    // Setting opacity for child elements in Children Components
+    if (gap >= 0) {
+      const calcOpacity = scrollY.get() / containerRef.current.offsetTop;
+      if (calcOpacity > 0.15) {
+        setContentOpacity(calcOpacity);
+      } else {
+        setContentOpacity(0);
+      }
+    }
+  });
+
+  useEffect(() => {
+    const scrollPos = window.scrollY;
+    const differencePos =
+      (containerRef.current.offsetTop - scrollPos) /
+      containerRef.current.offsetTop;
+    const differencePosPercentage = differencePos * 100;
+
+    setGap(differencePosPercentage);
+  }, []);
 
   return (
-    <div className="min-h-screen">
-      <h1 className="lg:text-[12em] text-center">what we do</h1>
+    <motion.div ref={containerRef} className="min-h-screen">
+      <h1 className="text-[3em] leading-tight lg:text-[12em] text-center">
+        what we do
+      </h1>
+      <div className="relative lg:top-[-150px] grid grid-cols-1 lg:grid-cols-3 gap-6 px-[5%]">
+        {/* for desktop view */}
+        {data.map((ele, ind) => {
+          return (
+            <ServiceType
+              data={ele}
+              gap={gap}
+              index={ind}
+              opacity={contentOpacity}
+              key={"second-section-child" + ind + 1}
+            />
+          );
+        })}
 
-      <div className="relative top-[-150px] grid grid-cols-3 gap-6 px-[8%]">
-        {/*  */}
         {data.map((ele, ind) => {
           return (
             <div
-              key={"second-section-child" + ind + 1}
-              className="flex flex-col gap-6 p-8 bg-white bg-opacity-10 backdrop-filter backdrop-blur-md rounded-3xl"
+              key={ind + "service-type-mobile-view"}
+              className="flex lg:hidden flex-col gap-8 p-8 bg-white bg-opacity-10 backdrop-filter backdrop-blur-md rounded-3xl"
             >
-              <h1 className="text-[3em]">
+              <h1 className="text-[1.5em] uppercase">
                 <FiArrowUpRight className="inline" /> {ele.heading}
               </h1>
 
               <div className="flex flex-col gap-12 pb-6">
-                {ele.content.map((ele, ind) => {
+                {ele.content.map((data, ind) => {
                   return (
                     <div
-                      key={"second-section-child-child" + ind + 1}
+                      key={"sevice-type-mobile-view-child" + ind + 1}
                       className="flex flex-col gap-6"
                     >
                       <h1 className="text-xl">
-                        0{ind + 1}. {ele.title}
+                        0{ind + 1}. {data.title}
                       </h1>
-                      <hr className="h-1 bg-white" />
-                      <p className="text-[#afafaf]">{ele.desc}</p>
+                      <hr className="h-[1px] bg-white" />
+                      <p className="text-[#afafaf]">{data.desc}</p>
                     </div>
                   );
                 })}
@@ -80,6 +132,6 @@ export default function SecondSection() {
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 }

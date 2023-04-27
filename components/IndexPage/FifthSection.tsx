@@ -1,4 +1,3 @@
-import { Spring } from "react-spring";
 import React, { useState } from "react";
 import Services from "./FifthSection_Children/Services";
 import Price from "./FifthSection_Children/Price";
@@ -88,16 +87,16 @@ export default function FifthSection() {
   }
 
   return (
-    <div className="min-h-screen px-[15%] py-32 bg-black rounded-3xl">
-      <h1 className="text-center text-[3em]">
+    <div className="min-h-screen px-[5%] lg:px-[15%] py-32 bg-black rounded-3xl">
+      <h1 className="text-center text-[2em] lg:text-[3em]">
         calculate the cost of your project
       </h1>
-      <p className="mx-auto w-1/2 text-gray-400 text-center mb-12">
+      <p className="mx-auto lg:w-1/2 text-gray-400 text-center mb-12">
         By selecting the necessary options in the calculator, you can see the
         approximate cost of developing your project
       </p>
 
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-12 lg:gap-6">
         {data.map((ele, ind) => {
           return (
             <div
@@ -107,7 +106,7 @@ export default function FifthSection() {
               <h1 className="text-3xl">{ele.title}</h1>
               <p className="text-gray-400">{ele.desc}</p>
               <hr className="h-[1.5px] bg-gray-500 border-0 rounded" />
-              <div className="grid grid-cols-3 auto-rows-fr gap-3 py-3">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-3 py-3">
                 {ele.services.map((elem, ind) => {
                   return (
                     <Services
@@ -123,13 +122,13 @@ export default function FifthSection() {
         })}
       </div>
 
-      <div className="my-4 flex justify-between items-center">
+      <div className="my-4 flex flex-wrap justify-between items-center gap-3 py-4">
         <div>
           <p className="text-gray-400">Development cost (avg.)</p>
           <Price value={price} />
         </div>
 
-        <button className="p-5 text-lg text-white bg-red-600 rounded">
+        <button className="ml-auto p-5 text-lg text-white bg-red-600 rounded">
           Discuss the project
         </button>
       </div>
