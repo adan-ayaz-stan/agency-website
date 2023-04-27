@@ -1,24 +1,19 @@
+import { motion, useSpring, useTransform } from "framer-motion";
 import React, { useState, useEffect } from "react";
-import { animated, Spring, useSpring } from "react-spring";
 
 const Price = ({ value }) => {
-  const [prevValue, setPrevValue] = useState(value);
-
-  const props = useSpring({
-    val: value,
-    from: { val: prevValue },
-    config: { tension: 150, friction: 24 },
+  const x = useSpring(0, {
+    damping: 30,
+    duration: 0.6,
   });
 
+  const y = useTransform(x, (value) => "$" + value.toFixed(0));
+
   useEffect(() => {
-    setPrevValue(value);
+    x.set(value);
   }, [value]);
 
-  return (
-    <animated.h1 className="text-3xl">
-      {props.val.interpolate((val) => `$${Math.floor(val)}`)}
-    </animated.h1>
-  );
+  return <motion.h1 className="text-2xl">{y}</motion.h1>;
 };
 
 export default Price;
