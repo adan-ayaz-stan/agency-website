@@ -85,7 +85,7 @@ export default function SecondSection() {
 
   return (
     <motion.div ref={containerRef} className="min-h-screen">
-      <h1 className="text-[3em] leading-tight lg:text-[12em] text-center">
+      <h1 className="whitespace-nowrap text-[3em] leading-tight lg:text-[12em] text-center">
         what we do
       </h1>
       <div className="relative lg:top-[-150px] grid grid-cols-1 lg:grid-cols-3 gap-6 px-[5%]">
@@ -108,7 +108,7 @@ export default function SecondSection() {
               key={ind + "service-type-mobile-view"}
               className="flex lg:hidden flex-col gap-8 p-8 bg-white bg-opacity-10 backdrop-filter backdrop-blur-md rounded-3xl"
             >
-              <h1 className="text-[1.5em] uppercase">
+              <h1 className="flex flex-nowrap items-center text-[2.25em] uppercase">
                 <FiArrowUpRight className="inline" /> {ele.heading}
               </h1>
 

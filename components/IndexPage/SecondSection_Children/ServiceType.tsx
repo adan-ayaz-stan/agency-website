@@ -40,9 +40,9 @@ export default function ServiceType({ data, gap, index, opacity }) {
           duration: 0.2,
         },
       }}
-      className="hidden lg:flex flex-col gap-8 p-6 bg-white bg-opacity-10 backdrop-filter backdrop-blur-md rounded-3xl"
+      className="hidden min-w-fit lg:flex flex-col gap-8 p-6 bg-white bg-opacity-10 backdrop-filter backdrop-blur-md rounded-3xl"
     >
-      <h1 className="lg:text-[2.05em] uppercase">
+      <h1 className="whitespace-nowrap lg:text-[2.5em] uppercase">
         <FiArrowUpRight className="inline" /> {data.heading}
       </h1>
 
