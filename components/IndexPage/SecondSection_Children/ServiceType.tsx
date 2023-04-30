@@ -1,6 +1,16 @@
-import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import {
+  motion,
+  useMotionValue,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
-import { FiArrowUpRight } from "react-icons/fi";
+import {
+  FiArrowDownLeft,
+  FiArrowDownRight,
+  FiArrowUpRight,
+} from "react-icons/fi";
 
 export default function ServiceType({ data, gap, index, opacity }) {
   const [componentGap, setComponentGap] = useState(0);
@@ -33,7 +43,7 @@ export default function ServiceType({ data, gap, index, opacity }) {
     <motion.div
       animate={{
         y: `${componentGap / 2}%`,
-        backdropFilter: componentGap ? "blur(5px)" : "blur(20px)",
+        backdropFilter: componentGap < -50 ? "blur(5px)" : "blur(20px)",
         transition: {
           type: "keyframes",
           ease: "easeOut",
@@ -42,9 +52,17 @@ export default function ServiceType({ data, gap, index, opacity }) {
       }}
       className="hidden min-w-fit lg:flex flex-col gap-8 p-6 bg-white bg-opacity-10 backdrop-filter backdrop-blur-md rounded-3xl"
     >
-      <h1 className="whitespace-nowrap lg:text-[2.5em] uppercase">
-        <FiArrowUpRight className="inline" /> {data.heading}
-      </h1>
+      <motion.h1
+        style={{
+          opacity: 0.5 + contentOpacity * 0.5,
+        }}
+        className="whitespace-nowrap lg:text-[2.75em] uppercase"
+      >
+        {index == 2 ? <FiArrowUpRight className="inline" /> : ""}
+        {index == 1 ? <FiArrowDownRight className="inline" /> : ""}
+        {index == 0 ? <FiArrowDownLeft className="inline" /> : ""}
+        {data.heading}
+      </motion.h1>
 
       <motion.div
         animate={{ opacity: contentOpacity }}
