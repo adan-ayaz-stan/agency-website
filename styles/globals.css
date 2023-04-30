@@ -29,3 +29,8 @@ body {
 h1 {
   font-family: "Mona Sans", sans-serif;
 }
+
+::selection {
+  background-color: red;
+  color: #fff;
+}
