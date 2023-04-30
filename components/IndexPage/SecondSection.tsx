@@ -88,7 +88,7 @@ export default function SecondSection() {
       <h1 className="whitespace-nowrap text-[3em] leading-tight lg:text-[12em] text-center">
         what we do
       </h1>
-      <div className="relative lg:top-[-150px] grid grid-cols-1 lg:grid-cols-3 gap-6 px-[5%]">
+      <div className="relative lg:top-[-100px] grid grid-cols-1 lg:grid-cols-3 gap-6 px-[5%]">
         {/* for desktop view */}
         {data.map((ele, ind) => {
           return (

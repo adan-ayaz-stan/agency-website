@@ -1,16 +1,15 @@
-import {
-  motion,
-  useMotionValue,
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import localFont from "next/font/local";
+import { motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import {
   FiArrowDownLeft,
   FiArrowDownRight,
   FiArrowUpRight,
 } from "react-icons/fi";
+
+const font = localFont({
+  src: "../../../assets/fonts/IBM_Plex_Sans_Condensed/IBMPlexSansCondensed-SemiBold.ttf",
+});
 
 export default function ServiceType({ data, gap, index, opacity }) {
   const [componentGap, setComponentGap] = useState(0);
@@ -21,9 +20,9 @@ export default function ServiceType({ data, gap, index, opacity }) {
       return gap * 0.25 * -1;
     }
     if (index == 1) {
-      return gap * 0.25;
+      return gap * 0.05;
     }
-    return gap * 0.12 * -1;
+    return gap * 0.15 * -1;
   }
 
   function gapHandler() {
@@ -50,13 +49,13 @@ export default function ServiceType({ data, gap, index, opacity }) {
           duration: 0.2,
         },
       }}
-      className="hidden min-w-fit lg:flex flex-col gap-8 p-6 bg-white bg-opacity-10 backdrop-filter backdrop-blur-md rounded-3xl"
+      className="hidden min-w-fit lg:flex flex-col gap-8 p-6 py-2 bg-white bg-opacity-10 backdrop-filter backdrop-blur-md rounded-3xl"
     >
       <motion.h1
         style={{
           opacity: 0.5 + contentOpacity * 0.5,
         }}
-        className="whitespace-nowrap lg:text-[3em]"
+        className={`${font.className} whitespace-nowrap lg:text-[3.5em]`}
       >
         {index == 2 ? <FiArrowUpRight className="inline" size={64} /> : ""}
         {index == 1 ? <FiArrowDownRight className="inline" size={64} /> : ""}
