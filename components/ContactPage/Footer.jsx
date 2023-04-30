@@ -5,7 +5,7 @@ import { FaTwitter, FaInstagram, FaWhatsapp } from "react-icons/fa/index";
 export default function Footer() {
   return (
     <div
-      className="flex flex-col justify-between px-[5%] py-8 z-20"
+      className="mt-auto flex flex-col justify-between px-[5%] py-8 z-20"
       style={{
         background:
           "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(17,17,17,0.7581233176864496) 100%)",

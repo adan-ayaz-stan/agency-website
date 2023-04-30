@@ -21,7 +21,7 @@ export default function Contact() {
           content="contact us, digital agency, web design, web development, contact form, phone number, email"
         />
       </Head>
-      <div className="min-h-screen">
+      <div className="min-h-screen flex flex-col">
         <Image
           src={bgContact}
           alt="bg-contact"
