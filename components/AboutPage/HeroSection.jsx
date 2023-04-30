@@ -28,10 +28,10 @@ export default function HeroSection() {
   });
 
   return (
-    <div className="min-h-screen px-[5%]">
+    <div className="min-h-screen">
       <NavigationBar />
       {/* Text Content */}
-      <div className="mt-6">
+      <div className="px-[5%] mt-6">
         <h1 className="text-4xl mb-12">About Us</h1>
 
         {data.map((ele, ind) => {
