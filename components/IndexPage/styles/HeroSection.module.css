@@ -16,11 +16,7 @@
   height: 500px;
   width: 500px;
 
-  background: radial-gradient(
-    circle,
-    rgba(122, 43, 43, 1) 0%,
-    rgba(17, 17, 17, 1) 100%
-  );
+  background: radial-gradient(circle, #ff3b2244 0%, rgba(17, 17, 17, 1) 100%);
   filter: blur(40px);
 
   border-radius: 999px;
@@ -36,11 +32,7 @@
   height: 500px;
   width: 500px;
 
-  background: radial-gradient(
-    circle,
-    rgba(122, 43, 43, 1) 0%,
-    rgba(17, 17, 17, 1) 100%
-  );
+  background: radial-gradient(circle, #ff3b2244 0%, rgba(17, 17, 17, 1) 100%);
   filter: blur(40px);
 
   border-radius: 999px;
