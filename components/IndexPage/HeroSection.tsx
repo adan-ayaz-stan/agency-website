@@ -31,7 +31,7 @@ export default function HeroSection() {
               duration: 0.5,
             },
           }}
-          className="text-center text-[3em] lg:text-[4em] leading-tight z-10"
+          className="text-center text-[3em] lg:text-[4.5em] leading-tight z-10"
         >
           Next Generation
           <br /> Digital Agency

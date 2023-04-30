@@ -18,12 +18,12 @@ export default function ServiceType({ data, gap, index, opacity }) {
 
   function depressionBasedOnIndex() {
     if (index == 2) {
-      return gap * 0.5 * -1;
+      return gap * 0.25 * -1;
     }
     if (index == 1) {
-      return gap * 0.1;
+      return gap * 0.25;
     }
-    return gap * 0.25 * -1;
+    return gap * 0.12 * -1;
   }
 
   function gapHandler() {
@@ -56,11 +56,11 @@ export default function ServiceType({ data, gap, index, opacity }) {
         style={{
           opacity: 0.5 + contentOpacity * 0.5,
         }}
-        className="whitespace-nowrap lg:text-[2.75em] uppercase"
+        className="whitespace-nowrap lg:text-[3em]"
       >
-        {index == 2 ? <FiArrowUpRight className="inline" /> : ""}
-        {index == 1 ? <FiArrowDownRight className="inline" /> : ""}
-        {index == 0 ? <FiArrowDownLeft className="inline" /> : ""}
+        {index == 2 ? <FiArrowUpRight className="inline" size={64} /> : ""}
+        {index == 1 ? <FiArrowDownRight className="inline" size={64} /> : ""}
+        {index == 0 ? <FiArrowDownLeft className="inline" size={64} /> : ""}
         {data.heading}
       </motion.h1>
 
