@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi/index";
 import { useScroll } from "framer-motion";
 import ServiceType from "./SecondSection_Children/ServiceType";
+import { Parallax } from "react-scroll-parallax";
 
 const data = [
   {
@@ -85,9 +86,11 @@ export default function SecondSection() {
 
   return (
     <motion.div ref={containerRef} className="min-h-screen">
-      <h1 className="whitespace-nowrap text-[3em] leading-tight lg:text-[12em] text-center">
-        what we do
-      </h1>
+      <Parallax speed={5}>
+        <h1 className="whitespace-nowrap text-[3em] leading-tight lg:text-[12em] text-center">
+          what we do
+        </h1>
+      </Parallax>
       <div className="relative lg:top-[-100px] grid grid-cols-1 lg:grid-cols-3 gap-6 px-[5%]">
         {/* for desktop view */}
         {data.map((ele, ind) => {

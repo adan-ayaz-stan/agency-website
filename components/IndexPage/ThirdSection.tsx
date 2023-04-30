@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import React, { useRef } from "react";
+import { Parallax } from "react-scroll-parallax";
 
 import styles from "./styles/ThirdSection.module.css";
 
@@ -23,7 +24,9 @@ export default function ThirdSection() {
     <div
       className={`h-fit max-w-screen overflow-hidden flex justify-center items-center ${styles.main}`}
     >
-      <h1 className="text-[4rem] lg:text-[12rem]">our stack</h1>
+      <Parallax speed={5}>
+        <h1 className="text-[4rem] lg:text-[12rem]">our stack</h1>
+      </Parallax>
 
       <div
         ref={constraintsRef}
