@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import dynamic from "next/dynamic";
 import "@/styles/globals.css";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
@@ -27,7 +28,9 @@ export default function App({ Component, pageProps }) {
         outerScale={2}
         outerAlpha={4}
       />
-      <Component {...pageProps} />
+      <ParallaxProvider>
+        <Component {...pageProps} />
+      </ParallaxProvider>
     </>
   );
 }
