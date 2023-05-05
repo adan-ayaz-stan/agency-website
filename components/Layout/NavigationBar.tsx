@@ -33,10 +33,6 @@ export default function NavigationBar() {
       >
         Contact Us
       </Link>
-
-      <div className="ml-auto">
-        <FaGlobe size={24} />
-      </div>
     </motion.div>
   );
 }

@@ -13,7 +13,6 @@ const font = localFont({
 
 export default function ServiceType({ data, gap, index, opacity }) {
   const [componentGap, setComponentGap] = useState(0);
-  const [contentOpacity, setContentOpacity] = useState(0);
 
   function depressionBasedOnIndex() {
     if (index == 2) {
@@ -35,25 +34,19 @@ export default function ServiceType({ data, gap, index, opacity }) {
 
   useEffect(() => {
     gapHandler();
-    setContentOpacity(opacity);
-  }, [gap, opacity]);
+  }, [gap]);
 
   return (
-    <motion.div
-      animate={{
-        y: `${componentGap / 2}%`,
-        backdropFilter: componentGap < -50 ? "blur(5px)" : "blur(20px)",
-        transition: {
-          type: "keyframes",
-          ease: "easeOut",
-          duration: 0.2,
-        },
+    <div
+      style={{
+        transform: "translateY(" + componentGap / 2 + "%)",
+        backdropFilter: `blur(${opacity * 15}px)`,
       }}
       className="hidden min-w-fit lg:flex flex-col gap-8 p-6 py-2 bg-white bg-opacity-10 backdrop-filter backdrop-blur-md rounded-3xl"
     >
       <motion.h1
         style={{
-          opacity: 0.5 + contentOpacity * 0.5,
+          opacity: 0.5 + opacity * 0.5,
         }}
         className={`${font.className} whitespace-nowrap lg:text-[3.5em]`}
       >
@@ -64,7 +57,7 @@ export default function ServiceType({ data, gap, index, opacity }) {
       </motion.h1>
 
       <motion.div
-        animate={{ opacity: contentOpacity }}
+        style={{ opacity: opacity }}
         className="flex flex-col gap-12 pb-6"
       >
         {data.content.map((data, ind) => {
@@ -82,6 +75,6 @@ export default function ServiceType({ data, gap, index, opacity }) {
           );
         })}
       </motion.div>
-    </motion.div>
+    </div>
   );
 }

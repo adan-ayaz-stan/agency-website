@@ -1,24 +1,24 @@
 import { motion } from "framer-motion";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Parallax } from "react-scroll-parallax";
 
 import styles from "./styles/ThirdSection.module.css";
 
+const techArray = [
+  "react.js",
+  "vue.js",
+  "svelte",
+  "next.js",
+  "html",
+  "css",
+  "JS",
+  "TS",
+  "Python",
+  "node.js",
+];
+
 export default function ThirdSection() {
   const constraintsRef = useRef(false);
-
-  const techArray = [
-    "react.js",
-    "vue.js",
-    "svelte",
-    "next.js",
-    "html",
-    "css",
-    "JS",
-    "TS",
-    "Python",
-    "node.js",
-  ];
 
   return (
     <div
@@ -32,21 +32,21 @@ export default function ThirdSection() {
         ref={constraintsRef}
         className="absolute top-0 left-0 flex items-center justify-center h-full w-full z-20"
       >
-        <div className="grid grid-cols-5 md:grid-cols-5 auto-rows-auto gap-4">
-          {techArray.map((ele, ind) => {
-            return (
-              <motion.div
-                className="h-40 w-40 text-2xl flex items-center justify-center text-red-600 bg-white bg-opacity-20 rounded-lg backdrop-blur-md"
-                style={{ fontFamily: "IBM Plex Mono, monospace" }}
-                drag
-                dragConstraints={constraintsRef}
-                key={ind + "tech-stack"}
-              >
-                {ele}
-              </motion.div>
-            );
-          })}
-        </div>
+        {techArray.map((ele, ind) => {
+          return (
+            <motion.div
+              className="absolute h-52 w-52 font-bold text-3xl flex items-center justify-center text-red-600 bg-black bg-opacity-30 rounded-[43px] backdrop-blur-md border-[1px] border-red-600"
+              style={{
+                fontFamily: "IBM Plex Mono, monospace",
+              }}
+              drag
+              dragConstraints={constraintsRef}
+              key={ind + "tech-stack"}
+            >
+              {ele}
+            </motion.div>
+          );
+        })}
       </div>
     </div>
   );

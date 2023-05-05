@@ -30,8 +30,10 @@ const data = [
 export default function FourthSection() {
   return (
     <div
-      className={`min-h-screen h-fit flex justify-center ${styles.main} pb-20`}
+      className={`relative min-h-screen max-w-screen h-fit flex justify-center py-20 overflow-x-hidden`}
     >
+      <div className="absolute top-[50%] left-[50%] h-[50%] w-[50%] bg-red-500 -translate-x-[50%] -translate-y-[50%] rounded-full blur-[5em]" />
+
       <Parallax speed={-15}>
         <h1 className="absolute w-screen top-0 left-0 text-center text-[4rem] lg:text-[12rem]">
           portfolio
