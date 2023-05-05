@@ -10,14 +10,14 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About Us | Digital Agency</title>
+        <title>About Us | Vovon Digital Agency</title>
         <meta
           name="description"
           content="Learn about our digital agency and the web design and development services we offer. Contact us to schedule a consultation today."
         />
         <meta
           name="keywords"
-          content="about us, digital agency, web design, web development, team, company"
+          content="vovon, vovon digital agency, vovon website, about us, digital agency, web design, web development, team, company"
         />
       </Head>
       <div className="relative min-h-screen h-fit">

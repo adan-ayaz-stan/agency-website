@@ -11,14 +11,14 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Contact Us | Digital Agency</title>
+        <title>Contact Us | Vovon Digital Agency</title>
         <meta
           name="description"
           content="Contact our digital agency to discuss your web design and development needs. Fill out our contact form or call us to schedule a consultation."
         />
         <meta
           name="keywords"
-          content="contact us, digital agency, web design, web development, contact form, phone number, email"
+          content="vovon, vovon digital agency, vovon website, contact us, digital agency, web design, web development, contact form, phone number, email"
         />
       </Head>
       <div className="min-h-screen flex flex-col">

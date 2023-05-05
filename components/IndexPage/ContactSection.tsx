@@ -59,7 +59,7 @@ export default function ContactSection() {
             By clicking on the button below, you accept our privacy policy
           </p>
 
-          <button className="p-4 font-semibold bg-red-600 rounded-xl">
+          <button className="p-4 font-semibold bg-red-600 rounded-xl hover:bg-opacity-50 transition-all duration-700">
             Send
           </button>
         </form>

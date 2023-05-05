@@ -13,7 +13,7 @@ export default function Index() {
     <>
       <Head>
         <title>
-          Digital Agency | UI/UX | Web Design & Development Services
+          Vovon Digital Agency | UI/UX | Web Design & Development Services
         </title>
         <meta
           name="description"
@@ -21,7 +21,7 @@ export default function Index() {
         ></meta>
         <meta
           name="keywords"
-          content="digital agency, web design, web development, website design, website development, web agency, website agency, custom web design, custom website development, responsive web design"
+          content="vovon, vovon digital agency, vovon website, digital agency, web design, web development, website design, website development, web agency, website agency, custom web design, custom website development, responsive web design"
         ></meta>
       </Head>
       <main>

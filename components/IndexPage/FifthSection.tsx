@@ -128,7 +128,7 @@ export default function FifthSection() {
           <Price value={price} />
         </div>
 
-        <button className="ml-auto p-5 text-lg text-white bg-red-600 rounded">
+        <button className="ml-auto p-5 text-lg text-white bg-red-600 hover:bg-opacity-50 transition-all duration-700 rounded">
           Discuss the project
         </button>
       </div>

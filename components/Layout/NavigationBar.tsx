@@ -1,8 +1,11 @@
+import Link from "next/link";
+import Image from "next/image";
+import localFont from "next/font/local";
 import { motion, useMotionValueEvent } from "framer-motion";
 import React, { useState } from "react";
 import { useScroll } from "framer-motion";
-import { FaGlobe } from "react-icons/fa";
-import Link from "next/link";
+
+const avone = localFont({ src: "../../assets/fonts/avone/avone-stencil.otf" });
 
 export default function NavigationBar() {
   const [isTop, setIsTop] = useState(0);
@@ -18,8 +21,11 @@ export default function NavigationBar() {
       animate={{ y: isTop <= 20 ? 0 : -40 }}
       className={`flex flex-row justify-center items-center gap-6 px-[10%] py-6`}
     >
-      <Link href={"/"} className="mr-auto">
-        Logoa
+      <Link href={"/"} className="flex flex-col mr-auto">
+        <h1 className="text-4xl" style={avone.style}>
+          VOVON
+        </h1>
+        <p className="text-[11px] text-center tracking-[3px]">DIGITAL AGENCY</p>
       </Link>
       <Link
         href={"/about"}

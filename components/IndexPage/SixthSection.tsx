@@ -7,7 +7,10 @@ export default function SixthSection() {
     <div className="min-h-screen flex flex-col justify-center px-[10%] py-24 lg:py-12">
       <div className="w-full flex items-center justify-between">
         <h1 className="text-4xl">Our blog</h1>
-        <Link href="/" className="p-4 py-2 bg-red-600 rounded-lg">
+        <Link
+          href="/"
+          className="p-4 py-2 bg-red-600 rounded-lg hover:bg-opacity-50 transition-all duration-700"
+        >
           All articles
         </Link>
       </div>
