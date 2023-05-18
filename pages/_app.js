@@ -27,6 +27,7 @@ export default function App({ Component, pageProps }) {
         outerSize={12}
         outerScale={2}
         outerAlpha={4}
+        color={"255, 59, 34"}
       />
       <ParallaxProvider>
         <Component {...pageProps} />

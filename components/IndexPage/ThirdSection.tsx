@@ -33,10 +33,14 @@ export default function ThirdSection() {
         className="absolute top-0 left-0 flex items-center justify-center h-full w-full z-20"
       >
         {techArray.map((ele, ind) => {
+          const leftTrans = Math.floor(Math.random() * 50);
+          const topTrans = Math.floor(Math.random() * 50);
           return (
             <motion.div
-              className="absolute h-52 w-52 font-bold text-3xl flex items-center justify-center text-red-600 bg-black bg-opacity-30 rounded-[43px] backdrop-blur-md border-[1px] border-red-600"
+              className={`absolute h-52 w-52 font-bold text-3xl flex items-center justify-center text-red-600 bg-black bg-opacity-30 rounded-[43px] backdrop-blur-md border-[1px] border-red-600`}
               style={{
+                left: `${leftTrans}%`,
+                top: `${topTrans}%`,
                 fontFamily: "IBM Plex Mono, monospace",
               }}
               drag

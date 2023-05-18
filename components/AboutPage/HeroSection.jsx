@@ -55,7 +55,7 @@ export default function HeroSection() {
             }}
             className="text-[10em] transform-gpu -rotate-45 skew-x-12 skew-y-12"
           >
-            VOVON
+            LUCEFORGE
           </h1>
         </div>
         <div className="min-w-[500px] w-1/2 h-full absolute top-0 right-0 flex items-center justify-start px-12 ml-auto overflow-hidden">
@@ -71,7 +71,7 @@ export default function HeroSection() {
             }}
             className="text-[10em] transform-gpu -rotate-45 skew-x-12 skew-y-12"
           >
-            WINCENZXO
+            LUCEFORGE
           </motion.h1>
         </div>
       </div>
