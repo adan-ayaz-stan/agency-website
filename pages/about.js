@@ -7,6 +7,8 @@ import bgAbout from "../assets/background/bg-about.webp";
 import Head from "next/head";
 
 export default function About() {
+  const navStore = useRecoilValue(navigationStore);
+
   return (
     <>
       <Head>

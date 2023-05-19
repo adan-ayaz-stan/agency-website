@@ -10,11 +10,19 @@ import SixthSection from "@/components/AggregatorsPage/SixthSection";
 import TenthSection from "@/components/AggregatorsPage/TenthSection";
 import ThirdSection from "@/components/AggregatorsPage/ThirdSection";
 import Footer from "@/components/IndexPage/Footer";
-import NavigationBar from "@/components/Layout/NavigationBar";
+import MenuOpenView from "@/components/Layout/MenuOpenView";
+import { navigationStore } from "@/stores/navigationStore";
+import { AnimatePresence } from "framer-motion";
+import { useRecoilValue } from "recoil";
 
 export default function Aggregators() {
+  const navStore = useRecoilValue(navigationStore);
+
   return (
-    <div>
+    <main>
+      <AnimatePresence>
+        {navStore.isMenuOpen && <MenuOpenView />}
+      </AnimatePresence>
       <HeroSection />
       <SecondSection />
       <ThirdSection />
@@ -27,6 +35,6 @@ export default function Aggregators() {
       <TenthSection />
       <ContactSection />
       <Footer />
-    </div>
+    </main>
   );
 }

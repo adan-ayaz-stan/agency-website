@@ -6,8 +6,13 @@ import NavigationBar from "@/components/Layout/NavigationBar";
 
 import bgContact from "../assets/background/bg-contact.webp";
 import Head from "next/head";
+import MenuOpenView from "@/components/Layout/MenuOpenView";
+import { navigationStore } from "@/stores/navigationStore";
+import { AnimatePresence } from "framer-motion";
+import { useRecoilValue } from "recoil";
 
 export default function Contact() {
+  const navStore = useRecoilValue(navigationStore);
   return (
     <>
       <Head>
@@ -21,7 +26,11 @@ export default function Contact() {
           content="vovon, vovon digital agency, vovon website, contact us, digital agency, web design, web development, contact form, phone number, email"
         />
       </Head>
-      <div className="min-h-screen flex flex-col">
+      <main className="min-h-screen flex flex-col">
+        <AnimatePresence>
+          {navStore.isMenuOpen && <MenuOpenView />}
+        </AnimatePresence>
+
         <Image
           src={bgContact}
           alt="bg-contact"
@@ -34,7 +43,7 @@ export default function Contact() {
         <HeroSection />
         <br />
         <Footer />
-      </div>
+      </main>
     </>
   );
 }
