@@ -5,6 +5,10 @@ import Image from "next/image";
 
 import bgAbout from "../assets/background/bg-about.webp";
 import Head from "next/head";
+import MenuOpenView from "@/components/Layout/MenuOpenView";
+import { navigationStore } from "@/stores/navigationStore";
+import { AnimatePresence } from "framer-motion";
+import { useRecoilValue } from "recoil";
 
 export default function About() {
   const navStore = useRecoilValue(navigationStore);
@@ -22,7 +26,10 @@ export default function About() {
           content="vovon, vovon digital agency, vovon website, about us, digital agency, web design, web development, team, company"
         />
       </Head>
-      <div className="relative min-h-screen h-fit">
+      <main className="relative min-h-screen h-fit">
+        <AnimatePresence>
+          {navStore.isMenuOpen && <MenuOpenView />}
+        </AnimatePresence>
         <Image
           src={bgAbout}
           alt={"sss"}
@@ -32,7 +39,7 @@ export default function About() {
         <HeroSection />
         <CooperateSection />
         <Footer />
-      </div>
+      </main>
     </>
   );
 }
