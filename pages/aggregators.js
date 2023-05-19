@@ -13,28 +13,34 @@ import Footer from "@/components/IndexPage/Footer";
 import MenuOpenView from "@/components/Layout/MenuOpenView";
 import { navigationStore } from "@/stores/navigationStore";
 import { AnimatePresence } from "framer-motion";
+import Head from "next/head";
 import { useRecoilValue } from "recoil";
 
 export default function Aggregators() {
   const navStore = useRecoilValue(navigationStore);
 
   return (
-    <main>
-      <AnimatePresence>
-        {navStore.isMenuOpen && <MenuOpenView />}
-      </AnimatePresence>
-      <HeroSection />
-      <SecondSection />
-      <ThirdSection />
-      <FourthSection />
-      <FifthSection />
-      <SixthSection />
-      <SeventhSection />
-      <EightSection />
-      <NinthSection />
-      <TenthSection />
-      <ContactSection />
-      <Footer />
-    </main>
+    <>
+      <Head>
+        <title>Aggregators | LuceForge Digital Agency</title>
+      </Head>
+      <main>
+        <AnimatePresence>
+          {navStore.isMenuOpen && <MenuOpenView />}
+        </AnimatePresence>
+        <HeroSection />
+        <SecondSection />
+        <ThirdSection />
+        <FourthSection />
+        <FifthSection />
+        <SixthSection />
+        <SeventhSection />
+        <EightSection />
+        <NinthSection />
+        <TenthSection />
+        <ContactSection />
+        <Footer />
+      </main>
+    </>
   );
 }

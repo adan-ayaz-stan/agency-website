@@ -19,7 +19,7 @@ export default function Index() {
     <>
       <Head>
         <title>
-          Vovon Digital Agency | UI/UX | Web Design & Development Services
+          LuceForge Digital Agency | UI/UX | Web Design & Development Services
         </title>
         <meta
           name="description"

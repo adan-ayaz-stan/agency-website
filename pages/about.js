@@ -12,7 +12,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About Us | Vovon Digital Agency</title>
+        <title>About Us | LuceForge Digital Agency</title>
         <meta
           name="description"
           content="Learn about our digital agency and the web design and development services we offer. Contact us to schedule a consultation today."

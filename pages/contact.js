@@ -16,7 +16,7 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Contact Us | Vovon Digital Agency</title>
+        <title>Contact Us | LuceForge Digital Agency</title>
         <meta
           name="description"
           content="Contact our digital agency to discuss your web design and development needs. Fill out our contact form or call us to schedule a consultation."
