@@ -5,11 +5,13 @@ export default function EightSection() {
   return (
     <div className="py-20 pb-40">
       <Parallax speed={-10}>
-        <h1 className="text-center text-[#51536d] text-[18em]">stack</h1>
+        <h1 className="text-center text-[#51536d] text-[10em] lg:text-[18em]">
+          stack
+        </h1>
       </Parallax>
 
       <Parallax speed={5}>
-        <div className="grid grid-cols-4 gap-6 px-[15%] text-[#ff3b22] font-bold">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-8 lg:px-[15%] text-[#ff3b22] font-bold">
           {[
             "next.js",
             "nuxt.js",

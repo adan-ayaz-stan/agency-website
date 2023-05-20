@@ -1,7 +1,9 @@
 import ContactSection from "@/components/AggregatorsPage/ContactSection";
 import EightSection from "@/components/AggregatorsPage/EightSection";
 import FifthSection from "@/components/AggregatorsPage/FifthSection";
+import FifthSectionMobileView from "@/components/AggregatorsPage/FifthSectionMobileView";
 import FourthSection from "@/components/AggregatorsPage/FourthSection";
+import FourthSectionMobileView from "@/components/AggregatorsPage/FourthSectionMobileView";
 import HeroSection from "@/components/AggregatorsPage/HeroSection";
 import NinthSection from "@/components/AggregatorsPage/NinthSection";
 import SecondSection from "@/components/AggregatorsPage/SecondSection";
@@ -32,7 +34,9 @@ export default function Aggregators() {
         <SecondSection />
         <ThirdSection />
         <FourthSection />
+        <FourthSectionMobileView />
         <FifthSection />
+        <FifthSectionMobileView />
         <SixthSection />
         <SeventhSection />
         <EightSection />

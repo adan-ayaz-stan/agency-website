@@ -21,7 +21,7 @@ export default function FifthSection() {
   });
 
   return (
-    <div ref={containerRef} className="min-h-screen">
+    <div ref={containerRef} className="hidden lg:block min-h-screen">
       {/* 
 /*******************************************
  * UPPER SECTION THAT TRANSLATES DOWNWARDS *

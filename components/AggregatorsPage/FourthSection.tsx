@@ -32,7 +32,7 @@ export default function FourthSection() {
   });
 
   return (
-    <div className="min-h-[300vh]">
+    <div className="hidden lg:block min-h-[300vh]">
       <div ref={containerRef} className="relative min-h-[200vh]">
         {/* 
         /***********************************
@@ -46,7 +46,7 @@ export default function FourthSection() {
             top: isFixed ? `0px` : `${translateY}px`,
             left: "0px",
           }}
-          className="grid grid-cols-2 w-screen h-screen"
+          className="grid grid-cols-1 lg:grid-cols-2 w-screen h-screen"
         >
           {/* 
             //

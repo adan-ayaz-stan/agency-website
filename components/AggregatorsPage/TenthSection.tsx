@@ -22,7 +22,7 @@ export default function TenthSection() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center gap-6 px-[15%] py-32">
+    <div className="min-h-screen flex flex-col items-center justify-center gap-6 px-8 lg:px-[15%] py-32">
       <h1 className="text-4xl">Frequently Asked Questions</h1>
       <p className="text-[#afafaf]">
         We answer popular questions about our work

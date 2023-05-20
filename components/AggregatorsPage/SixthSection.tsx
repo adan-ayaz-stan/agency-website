@@ -8,16 +8,16 @@ import s6r1Img from "../../assets/images/aggss6r1img.webp";
 
 export default function SixthSection() {
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center gap-8 px-[15%] py-20">
+    <div className="min-h-screen flex flex-col justify-center items-center gap-4 lg:gap-8 px-6 lg:px-[15%] py-20">
       <h1 className="text-[2.5em]">Launched projects</h1>
 
-      <p className="w-4/6 text-center text-[#afafaf] mb-12">
+      <p className="lg:w-4/6 text-center text-[#afafaf] mb-6 lg:mb-12">
         Here are a few apps that we have developed. Both projects are our own
         startups in the field of sports and hospitality.
       </p>
 
-      <div className="w-full h-full grid grid-cols-12 gap-6">
-        <div className="group relative col-span-6 rounded-[40px]">
+      <div className="w-full h-full grid grid-cols-6 lg:grid-cols-12 gap-6">
+        <div className="group min-h-[500px] relative col-span-6 rounded-[40px]">
           <Image
             src={s6l1Img}
             alt="project-image"
