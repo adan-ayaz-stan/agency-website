@@ -5,7 +5,7 @@ export default function EightSection() {
   return (
     <div className="py-20 pb-40">
       <Parallax speed={-10}>
-        <h1 className="text-center text-[#51536d] text-[10em] lg:text-[18em]">
+        <h1 className="text-center text-[#51536d] text-[7em] lg:text-[18em]">
           stack
         </h1>
       </Parallax>
@@ -20,7 +20,7 @@ export default function EightSection() {
             "svelte",
             "git",
             "docker",
-            "typescript",
+            "ts/js",
           ].map((ele, ind) => {
             return (
               <div
@@ -28,7 +28,7 @@ export default function EightSection() {
                 style={{
                   fontFamily: "IBM Plex Mono",
                 }}
-                className="h-52 w-52 flex items-center justify-center text-2xl text-red-600 bg-black bg-opacity-30 rounded-[43px] backdrop-blur-md border-[1px] border-red-600"
+                className="h-40 w-40 md:h-52 md:w-52 flex items-center justify-center text-2xl text-red-600 bg-black bg-opacity-30 rounded-[24px] md:rounded-[43px] backdrop-blur-md border-[1px] border-red-600"
               >
                 {ele}
               </div>
