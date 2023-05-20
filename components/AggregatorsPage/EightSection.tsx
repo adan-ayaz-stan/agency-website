@@ -28,7 +28,7 @@ export default function EightSection() {
                 style={{
                   fontFamily: "IBM Plex Mono",
                 }}
-                className="h-40 w-40 md:h-52 md:w-52 flex items-center justify-center text-2xl text-red-600 bg-black bg-opacity-30 rounded-[24px] md:rounded-[43px] backdrop-blur-md border-[1px] border-red-600"
+                className="h-full w-full flex items-center justify-center text-2xl text-red-600 py-16 md:py-[100px] bg-black bg-opacity-30 rounded-[24px] md:rounded-[43px] backdrop-blur-md border-[1px] border-red-600"
               >
                 {ele}
               </div>

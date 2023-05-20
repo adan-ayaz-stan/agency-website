@@ -84,9 +84,13 @@ export default function MenuOpenView() {
               },
             }}
             key={"navigation-bar-app-mobile" + ind}
-            className="px-12 py-4 transition-[background] hover:bg-white hover:bg-opacity-10"
           >
-            {ele.title}
+            <Link
+              href={ele.link}
+              className="px-12 py-4 transition-[background] hover:bg-white hover:bg-opacity-10"
+            >
+              {ele.title}
+            </Link>
           </motion.div>
         );
       })}

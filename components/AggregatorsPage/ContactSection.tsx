@@ -11,7 +11,7 @@ export default function ContactSection() {
       }}
     >
       <SvgBackground />
-      <h1 className="px-[5%] text-[4em] lg:text-[5em] leading-tight">
+      <h1 className="px-[5%] text-[3em] lg:text-[5em] leading-tight">
         Do you have an idea? We know how to bring it to life!
       </h1>
 

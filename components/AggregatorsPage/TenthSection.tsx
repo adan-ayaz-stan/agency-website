@@ -22,7 +22,7 @@ export default function TenthSection() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center gap-6 px-8 lg:px-[15%] py-32">
+    <div className="min-h-screen flex flex-col items-center justify-center gap-6 px-4 lg:px-[15%] py-32">
       <h1 className="text-4xl">Frequently Asked Questions</h1>
       <p className="text-[#afafaf]">
         We answer popular questions about our work
@@ -47,12 +47,12 @@ function Faq({ data }) {
   return (
     <div
       onClick={toggleOpen}
-      className="group relative flex flex-col p-10 pr-14 bg-[#222] rounded-[40px]"
+      className="group relative flex flex-col p-7 lg:p-10 pr-14 bg-[#222] rounded-[40px]"
     >
-      <h1 className="text-3xl">{data.title}</h1>
+      <h1 className="text-2xl lg:text-3xl">{data.title}</h1>
       <p
         style={{
-          maxHeight: isOpen ? "200px" : "0px",
+          maxHeight: isOpen ? "500px" : "0px",
           padding: isOpen ? "10px 0px" : "0px 0px",
         }}
         className="text-[#afafaf] transition-all duration-[600ms] ease-in-out overflow-hidden"
