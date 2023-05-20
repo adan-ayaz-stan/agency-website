@@ -7,10 +7,17 @@ import { navigationStore } from "../../stores/navigationStore";
 
 import { AiOutlineClose } from "react-icons/ai";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 
 export default function MenuOpenView() {
   const navStore = useRecoilValue(navigationStore);
   const setNavStore = useSetRecoilState(navigationStore);
+
+  const router = useRouter();
+  function navigateTo(link) {
+    setNavStore({ isMenuOpen: false });
+    router.push(link);
+  }
 
   return (
     <motion.div
@@ -83,14 +90,11 @@ export default function MenuOpenView() {
                 ease: "easeInOut",
               },
             }}
+            onClick={() => navigateTo(ele.link)}
             key={"navigation-bar-app-mobile" + ind}
+            className="px-8 py-2 mb-2 hover:underline cursor-pointer"
           >
-            <Link
-              href={ele.link}
-              className="px-12 py-4 transition-[background] hover:bg-white hover:bg-opacity-10"
-            >
-              {ele.title}
-            </Link>
+            {ele.title}
           </motion.div>
         );
       })}
