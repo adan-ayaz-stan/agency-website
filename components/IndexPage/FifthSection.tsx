@@ -124,7 +124,7 @@ export default function FifthSection() {
 
       <div className="my-4 flex flex-wrap justify-between items-center gap-3 py-4">
         <div>
-          <p className="text-gray-400">Development cost (avg.)</p>
+          <p>Development cost (avg.)</p>
           <Price value={price} />
         </div>
 

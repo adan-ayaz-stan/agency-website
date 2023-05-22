@@ -7,16 +7,13 @@ import { navigationStore } from "../../stores/navigationStore";
 
 import { AiOutlineClose } from "react-icons/ai";
 import { motion } from "framer-motion";
-import { useRouter } from "next/router";
 
 export default function MenuOpenView() {
   const navStore = useRecoilValue(navigationStore);
   const setNavStore = useSetRecoilState(navigationStore);
 
-  const router = useRouter();
   function navigateTo(link) {
-    setNavStore({ isMenuOpen: false });
-    router.push(link);
+    window.location.href = link;
   }
 
   return (

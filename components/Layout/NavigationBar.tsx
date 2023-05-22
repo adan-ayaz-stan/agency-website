@@ -36,6 +36,12 @@ export default function NavigationBar() {
         Aggregators
       </Link>
       <Link
+        href={"/calculators"}
+        className="hidden lg:block p-3 px-5 hover:bg-[#120f0e] bg-opacity-70 rounded-lg transition-all duration-400"
+      >
+        Calculators
+      </Link>
+      <Link
         href={"/about"}
         className="hidden lg:block p-3 px-5 hover:bg-[#120f0e] bg-opacity-70 rounded-lg transition-all duration-400"
       >

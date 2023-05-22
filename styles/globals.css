@@ -30,6 +30,10 @@ h1 {
   font-family: "Mona Sans", sans-serif;
 }
 
+p {
+  color: #afafaf;
+}
+
 ::selection {
   background-color: red;
   color: #fff;
