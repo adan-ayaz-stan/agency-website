@@ -88,8 +88,11 @@ export default function SecondSection() {
     <motion.div ref={containerRef} className="min-h-screen">
       <h1
         style={{ opacity: contentOpacity + 0.05 }}
-        className="whitespace-nowrap text-[3em] leading-tight lg:text-[12em] text-center"
+        className="hidden md:block whitespace-nowrap md:text-[6em] leading-tight lg:text-[12em] text-center"
       >
+        what we do
+      </h1>
+      <h1 className="md:hidden whitespace-nowrap text-[3em] text-center">
         what we do
       </h1>
       <div className="relative lg:top-[-100px] grid grid-cols-1 lg:grid-cols-3 gap-6 px-[5%]">

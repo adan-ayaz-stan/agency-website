@@ -25,7 +25,7 @@ export default function ThirdSection() {
       className={`h-fit max-w-screen overflow-hidden flex justify-center items-center ${styles.main}`}
     >
       <Parallax speed={5}>
-        <h1 className="text-[4rem] lg:text-[12rem]">our stack</h1>
+        <h1 className="text-[4rem] md:text-[8em] lg:text-[12rem]">our stack</h1>
       </Parallax>
 
       <div

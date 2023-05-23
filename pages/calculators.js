@@ -10,22 +10,28 @@ import { AnimatePresence } from "framer-motion";
 import MenuOpenView from "@/components/Layout/MenuOpenView";
 import { navigationStore } from "@/stores/navigationStore";
 import { useRecoilValue } from "recoil";
+import Head from "next/head";
 
 export default function Calculators() {
   const navStore = useRecoilValue(navigationStore);
 
   return (
-    <main>
-      <AnimatePresence>
-        {navStore.isMenuOpen && <MenuOpenView />}
-      </AnimatePresence>
-      <HeroSection />
-      <SecondSection />
-      <ThirdSection />
-      <FourthSection />
-      <FifthSection />
-      <ContactSection />
-      <Footer />
-    </main>
+    <>
+      <Head>
+        <title>Calculators | LuceForge Digital Agency</title>
+      </Head>
+      <main>
+        <AnimatePresence>
+          {navStore.isMenuOpen && <MenuOpenView />}
+        </AnimatePresence>
+        <HeroSection />
+        <SecondSection />
+        <ThirdSection />
+        <FourthSection />
+        <FifthSection />
+        <ContactSection />
+        <Footer />
+      </main>
+    </>
   );
 }
