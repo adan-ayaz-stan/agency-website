@@ -87,7 +87,7 @@ export default function SecondSection() {
   return (
     <motion.div ref={containerRef} className="min-h-screen">
       <h1
-        style={{ opacity: contentOpacity + 0.05 }}
+        style={{ opacity: contentOpacity + 0.05, transition: "all ease 1s" }}
         className="hidden md:block whitespace-nowrap md:text-[6em] leading-tight lg:text-[12em] text-center"
       >
         what we do

@@ -10,6 +10,9 @@ export default function HeroSection() {
   const [posY, setPosY] = useState(0);
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    if (latest * -1000 < -100) {
+      return;
+    }
     setPosY(latest * -1000);
   });
 
@@ -22,6 +25,9 @@ export default function HeroSection() {
 
       <div className="flex flex-col items-center justify-center gap-10 mt-20 lg:mt-12 p-6">
         <motion.h1
+          initial={{
+            y: 0,
+          }}
           animate={{
             y: posY,
             transition: {

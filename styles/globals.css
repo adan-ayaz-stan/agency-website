@@ -13,8 +13,10 @@
   src: url(../assets/fonts/Mona\ Sans/Mona-Sans-SemiBold.ttf);
 }
 
-html {
+html,
+body {
   scroll-behavior: smooth;
+  overscroll-behavior: none;
 }
 
 body {

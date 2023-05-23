@@ -40,11 +40,12 @@ export default function ServiceType({ data, gap, index, opacity }) {
     <div
       style={{
         transform: "translateY(" + componentGap / 2 + "%)",
+        transition: "all ease 1s",
         backdropFilter: `blur(${opacity * 15}px)`,
       }}
       className="hidden min-w-fit lg:flex flex-col gap-8 p-6 py-2 bg-white bg-opacity-10 backdrop-filter backdrop-blur-md rounded-3xl"
     >
-      <motion.h1
+      <h1
         style={{
           opacity: 0.5 + opacity * 0.5,
         }}
@@ -54,7 +55,7 @@ export default function ServiceType({ data, gap, index, opacity }) {
         {index == 1 ? <FiArrowDownRight className="inline" size={64} /> : ""}
         {index == 0 ? <FiArrowDownLeft className="inline" size={64} /> : ""}
         {data.heading}
-      </motion.h1>
+      </h1>
 
       <motion.div
         style={{ opacity: opacity }}
