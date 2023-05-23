@@ -23,12 +23,11 @@ export default function HeroSection() {
       <div className="flex flex-col items-center justify-center gap-10 mt-20 lg:mt-12 p-6">
         <motion.h1
           animate={{
-            y: posY * 0.5,
+            y: posY,
             transition: {
-              delay: 0.1,
               type: "keyframes",
-              ease: "easeOut",
-              duration: 0.5,
+              ease: "linear",
+              duration: 0.3,
             },
           }}
           className="text-center text-[3em] lg:text-[4.5em] leading-tight z-10"
@@ -44,7 +43,7 @@ export default function HeroSection() {
             transition: {
               type: "keyframes",
               ease: "easeOut",
-              duration: 0.5,
+              duration: 0.6,
             },
           }}
           className="relative lg:w-2/4 text-center text-[#afafaf] z-10"

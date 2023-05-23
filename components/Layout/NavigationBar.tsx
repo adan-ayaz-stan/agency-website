@@ -21,7 +21,7 @@ export default function NavigationBar() {
 
   return (
     <motion.div
-      animate={{ y: isTop <= 20 ? 0 : -40 }}
+      animate={{ y: isTop <= 40 ? 0 : -40 }}
       className={`flex flex-row justify-center items-center gap-6 px-[10%] pt-4`}
     >
       <Link href={"/"} className="flex flex-col mr-auto">

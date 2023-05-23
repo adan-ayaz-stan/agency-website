@@ -5,12 +5,12 @@ import NavigationBar from "../Layout/NavigationBar";
 import calcsLeft from "../../assets/images/calcs-left.png";
 import calcsRight from "../../assets/images/calcs-right.png";
 import Image from "next/image";
-import { useMotionValueEvent, useScroll } from "framer-motion";
+import { useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 
 export default function HeroSection() {
   const [scroll, setScroll] = useState(0);
 
-  const { scrollY } = useScroll();
+  const { scrollY, scrollYProgress } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setScroll(latest);
@@ -44,7 +44,9 @@ export default function HeroSection() {
             alt="calcs-left-image"
             fill
             style={{
-              transform: `translateX(${-scroll * 0.1}px)`,
+              transform: `translateX(${-scroll * 0.1}px) scale(${
+                scrollYProgress.get() + 1
+              })`,
             }}
             className="object-contain overflow-visible grayscale"
           />
@@ -56,7 +58,9 @@ export default function HeroSection() {
             alt="calcs-right-image"
             fill
             style={{
-              transform: `translateX(${scroll * 0.1}px)`,
+              transform: `translateX(${scroll * 0.1}px) scale(${
+                scrollYProgress.get() + 1
+              })`,
             }}
             className="object-contain overflow-visible grayscale"
           />
