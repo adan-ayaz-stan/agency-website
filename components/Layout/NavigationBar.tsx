@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useScroll } from "framer-motion";
 import { motion, useMotionValueEvent } from "framer-motion";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaHamburger } from "react-icons/fa";
 
 import logo from "../../assets/logo/logoWhite.svg";

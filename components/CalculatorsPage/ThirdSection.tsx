@@ -6,13 +6,13 @@ import { Parallax } from "react-scroll-parallax";
 
 export default function ThirdSection() {
   return (
-    <div className="min-h-screen flex items-center justify-center">
+    <div className="min-h-screen flex items-center justify-center py-20 md:py-6">
       <div className="flex flex-col gap-12">
         <h1 className="text-[3em] text-center text-[#8c8db2] font-bold">
           Completed Projects
         </h1>
 
-        <div className="grid grid-cols-3 gap-12 px-[15%]">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12 px-8 md:px-12 lg:px-[15%]">
           {[
             {
               title: "Hourly sale of the hotel",

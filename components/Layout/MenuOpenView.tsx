@@ -69,6 +69,10 @@ export default function MenuOpenView() {
           link: "/about",
         },
         {
+          title: "Calculators",
+          link: "/calculators",
+        },
+        {
           title: "Contact Us",
           link: "/contact",
         },

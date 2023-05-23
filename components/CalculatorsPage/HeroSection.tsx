@@ -14,14 +14,13 @@ export default function HeroSection() {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setScroll(latest);
-    console.log(latest);
   });
 
   return (
     <div className="relative min-h-screen flex flex-col ">
       <NavigationBar />
       <div className="flex flex-col gap-6 m-auto text-center items-center">
-        <h1 className="text-[5em] text-center leading-[1em]">
+        <h1 className="text-[2.5em] sm:text-[3em] md:text-[4em] lg:text-[5em] text-center leading-[1em]">
           We will count <br /> anything
         </h1>
         <p className="w-3/4 text-[#afafaf]">
@@ -38,7 +37,7 @@ export default function HeroSection() {
       Images with scroll-parallax
       */}
 
-      <div className="absolute top-0 left-0 h-full w-full grid grid-cols-3 z-[-5]">
+      <div className="hidden lg:grid absolute top-0 left-0 h-full w-full grid grid-cols-3 z-[-5]">
         <div className="relative h-[90%] mt-auto mr-20 overflow-visible">
           <Image
             src={calcsLeft}

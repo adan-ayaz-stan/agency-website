@@ -4,15 +4,17 @@ export default function SecondSection() {
   return (
     <div className="min-h-screen flex justify-center items-center">
       {/*  */}
-      <div className="flex flex-col items-center">
-        <h1 className="text-[3em] text-center">We can do for you</h1>
-        <p className="w-2/4 text-[#afafaf] text-center">
+      <div className="flex flex-col gap-2 items-center">
+        <h1 className="text-[2em] md:text-[3em] text-center">
+          We can do for you
+        </h1>
+        <p className="w-3/4 lg:w-2/4 text-[#afafaf] text-center">
           Development of any calculators for businesses and startups: enterprise
           profitability calculations, advantage calculators, comparative
           calculators and many others
         </p>
 
-        <div className="grid grid-cols-3 gap-8 px-[15%] mt-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-6 lg:px-[15%] mt-20">
           {[
             {
               title: "Calculator-presentation",

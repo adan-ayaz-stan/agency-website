@@ -9,6 +9,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./styles/FifthSection.module.css";
 
 export default function FifthSection() {
+  const [selectedRadio, setSelectedRadio] = useState(500);
   const [price, setPrice] = useState(0);
   const [isScenarioIncluded, setScenarioIncluded] = useState(false);
 
@@ -20,8 +21,8 @@ export default function FifthSection() {
   const y = useTransform(x, (value) => "$" + value.toFixed(0));
 
   useEffect(() => {
-    x.set(price);
-  }, [price]);
+    x.set(price + selectedRadio);
+  }, [price, selectedRadio]);
 
   function recalculatePrice(change: number) {
     setPrice((value) => value + change);
@@ -37,10 +38,12 @@ export default function FifthSection() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col gap-16 px-[15%] py-20">
+    <div className="min-h-screen flex flex-col gap-8 lg:gap-16 px-4 lg:px-[15%] py-20">
       {/* Top Heading */}
       <div className="text-center">
-        <h1 className="text-[3em]">Development Cost</h1>
+        <h1 className="text-[2.5em] leading-[1em] md:text-[3em]">
+          Development Cost
+        </h1>
         <p>
           Select the necessary options to see the average cost of developing a
           calculator in our studio
@@ -51,7 +54,7 @@ export default function FifthSection() {
 
       <h1 className="text-[2em]">Typpi</h1>
 
-      <div className="grid grid-cols-3 auto-rows-auto gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-auto gap-4">
         {[
           {
             title: "PitchCalc",
@@ -95,7 +98,7 @@ export default function FifthSection() {
             </label>
           </div>
         </h1>
-        <p>
+        <p className="text-sm sm:text-[1em]">
           Switch toggle to «on» if you don`t have a ready-made script for the
           calculator and we have to create it
         </p>
@@ -104,19 +107,24 @@ export default function FifthSection() {
       {/* Volume of calculations  */}
 
       <div>
-        <h1 className="text-[2em]">The volume of calculations</h1>
-        <p>
+        <h1 className="text-[2em] leading-[1em] mb-2">
+          The volume of calculations
+        </h1>
+        <p className="text-sm sm:text-[1em]">
           Select the approximate amount of calculations that will be in your
           calculator
         </p>
 
-        <RadioSlide />
+        <RadioSlide
+          selectedRadio={selectedRadio}
+          setSelectedRadio={setSelectedRadio}
+        />
       </div>
 
       {/* Design included Included */}
 
       <div>
-        <h1 className="text-[2em]">Design included Included</h1>
+        <h1 className="text-[2em] leading-[1em] mb-2">Design Included</h1>
         <p>Design development is included in the price</p>
       </div>
 
@@ -185,22 +193,34 @@ function Service({ data, recalculatePrice }) {
   );
 }
 
-function RadioSlide() {
+function RadioSlide({ selectedRadio, setSelectedRadio }) {
   return (
     <>
-      <div className="flex justify-between px-16 bg-[#222] rounded-2xl mt-4">
-        <div className="h-[20px] w-[20px] rounded-full bg-[white]"></div>
-        <div className="h-[20px] w-[20px] rounded-full bg-[white]"></div>
-        <div className="h-[20px] w-[20px] rounded-full bg-[white]"></div>
+      {/* The checkboxes - not attached with labels */}
+      <div className="flex justify-between px-5 sm:px-16 bg-[#222] rounded-2xl mt-4">
+        {[500, 1000, 1500].map((ele, ind) => {
+          return (
+            <a
+              onClick={() => setSelectedRadio(ele)}
+              key={"calculators-page-fifth-section-radio-slide-" + ind}
+              className="h-[20px] w-[20px] flex rounded-full bg-[white]"
+            >
+              {selectedRadio == ele && (
+                <div className="h-[14px] w-[14px] m-auto rounded-full bg-[#222]" />
+              )}
+            </a>
+          );
+        })}
       </div>
+      {/* Labels */}
       <div className="flex justify-between text-sm leading-[1.25em] rounded-2xl pt-5">
-        <p className="w-[150px] text-center">
+        <p className="w-[150px] text-center text-[12px] sm:text-[1em]">
           upto 10 actions or calculations of any complexity
         </p>
-        <p className="w-[150px] text-center">
+        <p className="w-[150px] text-center text-[12px] sm:text-[1em]">
           upto 25 actions or calculations of any complexity
         </p>
-        <p className="w-[150px] text-center">
+        <p className="w-[150px] text-center text-[12px] sm:text-[1em]">
           more than 25 actions or calculations of any complexity
         </p>
       </div>

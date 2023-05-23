@@ -5,12 +5,14 @@ export default function FourthSection() {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="flex flex-col gap-2">
-        <h1 className="text-center text-[4em]">How the calculator works</h1>
-        <p className="text-center text-[#afafaf] mb-20">
+        <h1 className="text-center text-[2.5em] leading-[1em] lg:text-[4em] px-3">
+          How the calculator works
+        </h1>
+        <p className="text-center text-[#afafaf] my-6 lg:mb-20 px-6">
           In most cases, we use these technologies to develop calculators
         </p>
 
-        <div className="flex justify-center items-center gap-4">
+        <div className="flex flex-row flex-wrap justify-center items-center gap-8 px-6">
           {[
             {
               title: "JavaScript",
