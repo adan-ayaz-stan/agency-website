@@ -37,7 +37,7 @@ export default function ThirdSection() {
           const topTrans = Math.floor(Math.random() * 50);
           return (
             <motion.div
-              className={`absolute h-52 w-52 font-bold text-3xl flex items-center justify-center text-red-600 bg-black bg-opacity-30 rounded-[43px] backdrop-blur-md border-[1px] border-red-600`}
+              className={`absolute h-36 w-36 md:h-52 md:w-52 font-bold text-xl lg:text-3xl flex items-center justify-center text-red-600 bg-black bg-opacity-30 rounded-[23px] lg:rounded-[43px] backdrop-blur-md border-[1px] border-red-600`}
               style={{
                 left: `${leftTrans}%`,
                 top: `${topTrans}%`,
