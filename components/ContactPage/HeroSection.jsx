@@ -63,21 +63,21 @@ export default function HeroSection() {
         <form className="flex flex-col gap-4">
           <input
             placeholder="Your name"
-            className="w-full p-5 text-sm bg-[#171921] outline-none rounded-2xl"
+            className="w-full p-5 text-sm bg-[#222222] outline-none rounded-2xl"
           />
           <div className="grid grid-cols-1 md:grid-cols-2 auto-rows-fr gap-3">
             <input
               placeholder="Email"
-              className="w-full p-5 text-sm bg-[#171921] outline-none rounded-2xl"
+              className="w-full p-5 text-sm bg-[#222222] outline-none rounded-2xl"
             />
             <input
               placeholder="Phone"
-              className="w-full p-5 text-sm bg-[#171921] outline-none rounded-2xl"
+              className="w-full p-5 text-sm bg-[#222222] outline-none rounded-2xl"
             />
           </div>
           <input
             placeholder="Company name/VAT"
-            className="w-full p-5 text-sm bg-[#171921] outline-none rounded-2xl"
+            className="w-full p-5 text-sm bg-[#222222] outline-none rounded-2xl"
           />
           <hr className="h-[1px] bg-gray-600 border-0" />
           <p className="text-gray-400">

@@ -29,7 +29,11 @@ export default function MenuOpenView() {
       }}
       className="fixed top-0 left-0 w-screen h-screen flex flex-col bg-[#111] py-4 text-xl z-50"
     >
-      <Link href={"/"} className="mx-auto mb-4">
+      <Link
+        onClick={() => setNavStore({ isMenuOpen: false })}
+        href={"/"}
+        className="mx-auto mb-4"
+      >
         {navStore.isMenuOpen && (
           <motion.div
             initial={{

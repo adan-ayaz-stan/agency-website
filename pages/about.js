@@ -9,6 +9,7 @@ import MenuOpenView from "@/components/Layout/MenuOpenView";
 import { navigationStore } from "@/stores/navigationStore";
 import { AnimatePresence } from "framer-motion";
 import { useRecoilValue } from "recoil";
+import { ScrollerMotion } from "scroller-motion";
 
 export default function About() {
   const navStore = useRecoilValue(navigationStore);
@@ -27,18 +28,20 @@ export default function About() {
         />
       </Head>
       <main className="relative min-h-screen h-fit">
-        <AnimatePresence>
-          {navStore.isMenuOpen && <MenuOpenView />}
-        </AnimatePresence>
-        <Image
-          src={bgAbout}
-          alt={"sss"}
-          className="object-cover scale-x-[-1] z-[-1]"
-          fill
-        />
-        <HeroSection />
-        <CooperateSection />
-        <Footer />
+        <ScrollerMotion>
+          <AnimatePresence>
+            {navStore.isMenuOpen && <MenuOpenView />}
+          </AnimatePresence>
+          <Image
+            src={bgAbout}
+            alt={"sss"}
+            className="object-cover scale-x-[-1] z-[-1]"
+            fill
+          />
+          <HeroSection />
+          <CooperateSection />
+          <Footer />
+        </ScrollerMotion>
       </main>
     </>
   );

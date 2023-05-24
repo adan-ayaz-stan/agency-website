@@ -17,6 +17,7 @@ import { navigationStore } from "@/stores/navigationStore";
 import { AnimatePresence } from "framer-motion";
 import Head from "next/head";
 import { useRecoilValue } from "recoil";
+import { ScrollerMotion } from "scroller-motion";
 
 export default function Aggregators() {
   const navStore = useRecoilValue(navigationStore);
@@ -27,23 +28,25 @@ export default function Aggregators() {
         <title>Aggregators | LuceForge Digital Agency</title>
       </Head>
       <main>
-        <AnimatePresence>
-          {navStore.isMenuOpen && <MenuOpenView />}
-        </AnimatePresence>
-        <HeroSection />
-        <SecondSection />
-        <ThirdSection />
-        <FourthSection />
-        <FourthSectionMobileView />
-        <FifthSection />
-        <FifthSectionMobileView />
-        <SixthSection />
-        <SeventhSection />
-        <EightSection />
-        <NinthSection />
-        <TenthSection />
-        <ContactSection />
-        <Footer />
+        <ScrollerMotion>
+          <AnimatePresence>
+            {navStore.isMenuOpen && <MenuOpenView />}
+          </AnimatePresence>
+          <HeroSection />
+          <SecondSection />
+          <ThirdSection />
+          <FourthSection />
+          <FourthSectionMobileView />
+          <FifthSection />
+          <FifthSectionMobileView />
+          <SixthSection />
+          <SeventhSection />
+          <EightSection />
+          <NinthSection />
+          <TenthSection />
+          <ContactSection />
+          <Footer />
+        </ScrollerMotion>
       </main>
     </>
   );

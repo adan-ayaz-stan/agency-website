@@ -23,7 +23,6 @@ export default function HeroSection() {
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    console.log(scrollY);
     setPosY(latest * 0.2);
   });
 
@@ -53,7 +52,7 @@ export default function HeroSection() {
               WebkitTextStrokeWidth: "3px",
               WebkitTextFillColor: "transparent",
             }}
-            className="text-[10em] transform-gpu -rotate-45 skew-x-12 skew-y-12"
+            className="text-[10em] font-bold transform-gpu -rotate-45 skew-x-12 skew-y-12"
           >
             LUCEFORGE
           </h1>
@@ -63,13 +62,13 @@ export default function HeroSection() {
             animate={{
               transform: `translateY(-${posY}px) rotate(-45deg) skewX(12deg) skewY(12deg)`,
               transition: {
-                duration: 0,
+                duration: 0.7,
                 delay: 0,
                 type: "keyframes",
                 ease: "easeOut",
               },
             }}
-            className="text-[10em] transform-gpu -rotate-45 skew-x-12 skew-y-12"
+            className="text-[10em] font-bold transform-gpu -rotate-45 skew-x-12 skew-y-12"
           >
             LUCEFORGE
           </motion.h1>

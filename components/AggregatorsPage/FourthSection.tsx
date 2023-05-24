@@ -7,7 +7,6 @@ export default function FourthSection() {
   const [isFixed, setFixed] = useState(false);
   const [translateY, setTranslateY] = useState(0);
 
-  const headerRef = useRef(null);
   const containerRef = useRef(null);
 
   function handleScroll() {
@@ -18,9 +17,9 @@ export default function FourthSection() {
       // Start translating
       setIntersection(intersection);
       setTranslateY(deltaDScroll);
-      setFixed(true);
+      // setFixed(true);
     } else {
-      setFixed(false);
+      // setFixed(false);
     }
   }
 
@@ -46,7 +45,7 @@ export default function FourthSection() {
             top: isFixed ? `0px` : `${translateY}px`,
             left: "0px",
           }}
-          className="grid grid-cols-1 lg:grid-cols-2 w-screen h-screen"
+          className="grid grid-cols-1 lg:grid-cols-2 w-screen h-screen transition-all ease-out duration-[0.8s]"
         >
           {/* 
             //
@@ -64,7 +63,7 @@ export default function FourthSection() {
             style={{
               transform: `translate(-${intersection * 100}%, -50%)`,
             }}
-            className="absolute h-3/4 w-3/4 top-[50%] left-[50%] rounded-2xl object-cover"
+            className="absolute h-3/4 w-3/4 top-[50%] left-[50%] rounded-2xl object-cover transition-all duration-[0.8s] ease"
           />
 
           {/* 

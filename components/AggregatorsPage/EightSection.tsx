@@ -4,7 +4,7 @@ import { Parallax } from "react-scroll-parallax";
 export default function EightSection() {
   return (
     <div className="py-20 pb-40">
-      <Parallax speed={-10}>
+      <Parallax speed={-10} className="transition-all ease duration-[0.8s]">
         <h1 className="text-center text-[#51536d] text-[7em] lg:text-[18em]">
           stack
         </h1>

@@ -48,7 +48,7 @@ export default function HeroSection() {
                 scrollYProgress.get() + 1
               })`,
             }}
-            className="object-contain overflow-visible grayscale"
+            className="object-contain overflow-visible grayscale transition-all duration-[0.7s] ease-out"
           />
         </div>
         <div />
@@ -62,7 +62,7 @@ export default function HeroSection() {
                 scrollYProgress.get() + 1
               })`,
             }}
-            className="object-contain overflow-visible grayscale"
+            className="object-contain overflow-visible grayscale transition-all duration-[0.7s] ease-out"
           />
         </div>
       </div>

@@ -34,10 +34,7 @@ export default function FourthSection() {
     >
       <div className="absolute top-[50%] left-[50%] h-[50%] w-[50%] bg-red-500 -translate-x-[50%] -translate-y-[50%] rounded-full blur-[5em]" />
 
-      <Parallax
-        speed={-15}
-        className="transition-all ease-in-out duration-[0.7s]"
-      >
+      <Parallax speed={-15} className="transition-all ease duration-[0.7s]">
         <h1 className="absolute w-screen top-0 left-0 text-center text-[4rem] md:text-[8em] lg:text-[12rem]">
           portfolio
         </h1>
