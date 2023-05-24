@@ -5,7 +5,7 @@ import SecondSection from "@/components/CalculatorsPage/SecondSection";
 import ThirdSection from "@/components/CalculatorsPage/ThirdSection";
 import ContactSection from "@/components/IndexPage/ContactSection";
 import Footer from "@/components/IndexPage/Footer";
-
+import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import MenuOpenView from "@/components/Layout/MenuOpenView";
 import { navigationStore } from "@/stores/navigationStore";

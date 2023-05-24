@@ -18,6 +18,7 @@ import { AnimatePresence } from "framer-motion";
 import Head from "next/head";
 import { useRecoilValue } from "recoil";
 import { ScrollerMotion } from "scroller-motion";
+import { useState, useEffect } from "react";
 
 export default function Aggregators() {
   const navStore = useRecoilValue(navigationStore);

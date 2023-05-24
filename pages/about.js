@@ -2,7 +2,7 @@ import CooperateSection from "@/components/AboutPage/CooperateSection";
 import HeroSection from "@/components/AboutPage/HeroSection";
 import Footer from "@/components/AboutPage/Footer";
 import Image from "next/image";
-
+import { useState, useEffect } from "react";
 import bgAbout from "../assets/background/bg-about.webp";
 import Head from "next/head";
 import MenuOpenView from "@/components/Layout/MenuOpenView";
