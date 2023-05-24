@@ -22,13 +22,29 @@ import { ScrollerMotion } from "scroller-motion";
 export default function Aggregators() {
   const navStore = useRecoilValue(navigationStore);
 
+  const [isDisabled, setDisabled] = useState(true);
+
+  useEffect(() => {
+    var screenWidth =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
+
+    var mobileWidthThreshold = 768;
+    if (screenWidth < mobileWidthThreshold) {
+      return setDisabled(true); // It's a mobile device
+    } else {
+      return setDisabled(false); // It's a desktop device
+    }
+  }, []);
+
   return (
     <>
       <Head>
         <title>Aggregators | LuceForge Digital Agency</title>
       </Head>
       <main>
-        <ScrollerMotion>
+        <ScrollerMotion disabled={isDisabled}>
           <AnimatePresence>
             {navStore.isMenuOpen && <MenuOpenView />}
           </AnimatePresence>

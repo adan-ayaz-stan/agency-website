@@ -14,11 +14,26 @@ import ThirdSection from "@/components/IndexPage/ThirdSection";
 import MenuOpenView from "@/components/Layout/MenuOpenView";
 
 import { navigationStore } from "@/stores/navigationStore";
-
-
+import { useEffect, useState } from "react";
 
 export default function Index() {
   const navStore = useRecoilValue(navigationStore);
+
+  const [isDisabled, setDisabled] = useState(true);
+
+  useEffect(() => {
+    var screenWidth =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
+
+    var mobileWidthThreshold = 768;
+    if (screenWidth < mobileWidthThreshold) {
+      return setDisabled(true); // It's a mobile device
+    } else {
+      return setDisabled(false); // It's a desktop device
+    }
+  }, []);
 
   return (
     <>
@@ -36,8 +51,7 @@ export default function Index() {
         ></meta>
       </Head>
       <main>
-        
-        <ScrollerMotion>
+        <ScrollerMotion disabled={isDisabled}>
           <AnimatePresence>
             {navStore.isMenuOpen && <MenuOpenView />}
           </AnimatePresence>

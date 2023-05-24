@@ -14,6 +14,22 @@ import { ScrollerMotion } from "scroller-motion";
 export default function About() {
   const navStore = useRecoilValue(navigationStore);
 
+  const [isDisabled, setDisabled] = useState(true);
+
+  useEffect(() => {
+    var screenWidth =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
+
+    var mobileWidthThreshold = 768;
+    if (screenWidth < mobileWidthThreshold) {
+      return setDisabled(true); // It's a mobile device
+    } else {
+      return setDisabled(false); // It's a desktop device
+    }
+  }, []);
+
   return (
     <>
       <Head>
@@ -28,7 +44,7 @@ export default function About() {
         />
       </Head>
       <main className="relative min-h-screen h-fit">
-        <ScrollerMotion>
+        <ScrollerMotion disabled={isDisabled}>
           <AnimatePresence>
             {navStore.isMenuOpen && <MenuOpenView />}
           </AnimatePresence>
