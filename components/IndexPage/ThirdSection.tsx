@@ -24,7 +24,10 @@ export default function ThirdSection() {
     <div
       className={`h-fit max-w-screen overflow-hidden flex justify-center items-center ${styles.main}`}
     >
-      <Parallax speed={5} className="transition-all duration-[0.8s] ease-out">
+      <Parallax
+        speed={5}
+        className="lg:transition-all lg:duration-[0.8s] lg:ease-out"
+      >
         <h1 className="text-[4rem] md:text-[8em] lg:text-[12rem]">our stack</h1>
       </Parallax>
 
